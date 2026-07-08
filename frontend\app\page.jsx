@@ -30,7 +30,7 @@ export default function Page() {
   const [loading, setLoading] = useState(false);
   const [dark, setDark] = useState(false);
   const [dragging, setDragging] = useState(false);
-  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:4000";
+  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
   const hasPreview = preview.headers.length > 0;
   const progressLabel = useMemo(() => {
