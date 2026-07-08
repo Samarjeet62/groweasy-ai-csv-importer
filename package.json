@@ -1,0 +1,26 @@
+{
+  "name": "groweasy-ai-csv-importer",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI-powered CSV importer for mapping arbitrary lead CSV files into GrowEasy CRM records.",
+  "workspaces": [
+    "backend",
+    "frontend",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm --workspace backend run dev\" \"npm --workspace frontend run dev\"",
+    "build": "npm --workspace frontend run build",
+    "start": "npm --workspace backend start",
+    "test": "npm --workspace backend test",
+    "lint": "npm --workspace frontend run lint",
+    "check": "npm --workspace backend run check && npm --workspace frontend run check"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
