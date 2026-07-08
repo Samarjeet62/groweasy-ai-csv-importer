@@ -28,6 +28,8 @@ npm run dev
 Frontend: http://localhost:3000  
 Backend health: http://localhost:4000/health
 
+When `NEXT_PUBLIC_API_BASE_URL` is blank, the frontend uses its built-in Next API route at `/api/import`. Set it to `http://localhost:4000` when you want to test the standalone Express backend.
+
 You can test the flow with `samples/messy-leads.csv`.
 
 ## AI Configuration
@@ -121,7 +123,29 @@ OPENAI_MODEL=gpt-4o-mini
 CORS_ORIGIN=https://your-vercel-app.vercel.app
 ```
 
-### Vercel Frontend
+### Vercel Single-App Deployment
+
+The project can run end-to-end on Vercel using the Next API route that reuses the backend parser/extractor modules.
+
+Use the repository root as the Vercel root directory.
+
+```bash
+Build Command: npm --workspace frontend run build
+Install Command: npm install
+Output Directory: frontend/.next
+```
+
+Environment variables:
+
+```env
+AI_PROVIDER=openai
+OPENAI_API_KEY=your_key
+OPENAI_MODEL=gpt-4o-mini
+```
+
+For a no-key demo deployment, set `AI_PROVIDER=mock`.
+
+### Vercel Frontend Only
 
 Use `frontend` as the Vercel root directory.
 
