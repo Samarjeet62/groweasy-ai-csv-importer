@@ -1,0 +1,6 @@
+Lead Submitted,Customer Name,Primary Contact,Email Address,Company / Project,Location,Sales Rep,Disposition,Comments,Campaign
+2026-05-13 14:20:48,John Doe,+91 9876543210,john.doe@example.com,GrowEasy,Mumbai Maharashtra India,test@gmail.com,follow up,Client is asking to reschedule demo,leads on demand
+13 May 2026 2:25 PM,Sarah Johnson,+91-9876543211,sarah.johnson@example.com,Tech Solutions,Bangalore Karnataka India,test@gmail.com,busy,"Person was busy, will try again next week",eden park
+2026/05/13 14:30,Rajesh Patel,+91 9876543212,rajesh.patel@example.com,Startup Inc,Delhi Delhi India,test@gmail.com,not interested,Not interested in our services,unknown source
+2026-05-13T14:35:22+05:30,Priya Singh,+91 9876543213,priya.singh@example.com,Enterprise Corp,Pune Maharashtra India,test@gmail.com,closed,"Deal closed, onboarding in progress",meridian tower
+2026-05-13,No Contact,,,,,,new,This row should be skipped,
