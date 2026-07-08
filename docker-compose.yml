@@ -1,0 +1,21 @@
+services:
+  backend:
+    build: .
+    command: npm --workspace backend run dev
+    ports:
+      - "4000:4000"
+    env_file:
+      - backend/.env
+    volumes:
+      - .:/app
+      - /app/node_modules
+  frontend:
+    build: .
+    command: npm --workspace frontend run dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
+    volumes:
+      - .:/app
+      - /app/node_modules
