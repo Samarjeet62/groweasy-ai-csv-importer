@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: groweasy-csv-importer-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm --workspace backend start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: AI_PROVIDER
+        value: mock
+      - key: AI_BATCH_SIZE
+        value: 20
+      - key: AI_MAX_RETRIES
+        value: 2
+      - key: CORS_ORIGIN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
